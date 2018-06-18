@@ -1,0 +1,21 @@
+
+
+<div class="container spacer">
+    <div class = "panel panel-primary">
+      <div class="panel-heading">Liste des produits</div>
+      <div class="panel-body">
+        <table class="table table-striped">
+          <tr>
+            <th>Code EAN</th>
+            <th>Nom</th>
+            <th>Descriptions</th>
+          </tr>
+          <tr *ngFor="let p of categorie.produits">
+            <td>{{p.codeEan}}</td>
+            <td>{{p.nom}}</td>
+            <td>{{p.description}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+</div>

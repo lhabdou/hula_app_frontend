@@ -1,0 +1,21 @@
+<div class="container spacer">
+    <div class = "panel panel-primary">
+      <div class="panel-heading">Liste des categories</div>
+      <div class="panel-body">
+        <table class="table table-striped">
+          <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Descriptions</th>
+            <th>Produits</th>
+          </tr>
+          <tr *ngFor="let c of categories">
+            <td>{{c.id}}</td>
+            <td>{{c.nom}}</td>
+            <td>{{c.description}}</td>
+            <td><a routerLink="categorie/{{c.id}}">ici</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+</div>

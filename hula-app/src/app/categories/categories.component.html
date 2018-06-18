@@ -10,10 +10,10 @@
             <th>Produits</th>
           </tr>
           <tr *ngFor="let c of categories">
-            <td>{{c.id}}</td>
-            <td>{{c.nom}}</td>
-            <td>{{c.description}}</td>
-            <td><a routerLink="categorie/{{c.id}}">ici</a></td>
+            <td>{{c.idCategorie}}</td>
+            <td>{{c.nomCategorie}}</td>
+            <td>{{c.descriptif}}</td>
+            <td><a routerLink="categorie/{{c.idCategorie}}">ici</a></td>
           </tr>
         </table>
       </div>

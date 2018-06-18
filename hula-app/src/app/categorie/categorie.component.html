@@ -10,10 +10,10 @@
             <th>Nom</th>
             <th>Descriptions</th>
           </tr>
-          <tr *ngFor="let p of categorie.produits">
+          <tr *ngFor="let p of produits" [routerLink]="['/categorie', p.id]">
             <td>{{p.codeEan}}</td>
             <td>{{p.nom}}</td>
-            <td>{{p.description}}</td>
+            <td>{{p.descriptif}}</td>
           </tr>
         </table>
       </div>

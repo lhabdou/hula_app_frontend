@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 
 export class Constantes {
 
-  LOCAL_BACKEND_URL="http://localhost:8080/"; 
+  LOCAL_BACKEND_URL='http://localhost:8080/'; 
 
 }
 

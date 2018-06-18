@@ -1,3 +1,4 @@
+import { Constantes } from './../constantes/constantes.utils';
 import { CategoriesService } from './../services/categories.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -12,14 +13,17 @@ import{HttpModule,Http,Response} from '@angular/http';
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
-  private categories:any;
-  private categoriesUrl = "hula-api/categories"; 
+ 
+private categories:any;
 
   constructor(
-    private categoriesService: CategoriesService) { }
+    private categoriesService: CategoriesService,
+    private constantes:Constantes,
+  private http: Http) { }
 
     ngOnInit() {
       this.categories = this.categoriesService.getCategories();
+      );
 
     }
 

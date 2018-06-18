@@ -10,17 +10,15 @@ import { RouterModule, ParamMap, ActivatedRoute, Router } from '@angular/router'
 })
 export class CategorieComponent implements OnInit {
 
-  private categorie:any;
-  private categorieUrl = "hula-api/categorie"; 
-
-  constructor(
-    private categoriesService: CategoriesService, 
-    private route:Router, private paramMap:ParamMap,
-    private http:Http) { }
+  private produits:any;
+  private categorie: any; 
+  private categorieUrl = "hula-app/categorie"; 
+  
 
     ngOnInit() {
-      
-      this.categorie = this.http.get(this.route.url);
+
+     //this.categorie = this.categoriesService.goToCategorie('1');
+      //this.produits = this.categorie.produits;
     }
 
 }

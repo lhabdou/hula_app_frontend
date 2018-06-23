@@ -18,10 +18,13 @@ backendURL = this.constantes.LOCAL_BACKEND_URL;
   getCategories() {
 
    return this.httpClient.get(this.backendURL + this.categoriesUrl)
-    .subscribe(data => {
-        console.log("voilà",data)
-      })
+    .toPromise();
     
+  }
+
+  goToCategorie(id:Number) {
+    return this.httpClient.get(this.backendURL + this.categorieUrl + id)
+    .toPromise();
   }
 }
 

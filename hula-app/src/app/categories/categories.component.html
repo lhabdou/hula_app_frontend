@@ -9,11 +9,11 @@
             <th>Descriptions</th>
             <th>Produits</th>
           </tr>
-          <tr *ngFor="let c of categories">
+          <tr *ngFor="let c of categories | async">
             <td>{{c.idCategorie}}</td>
             <td>{{c.nomCategorie}}</td>
             <td>{{c.descriptif}}</td>
-            <td><a routerLink="categorie/{{c.idCategorie}}">ici</a></td>
+            <td><a routerLink="/categorie/{{c.idCategorie}}">ici</a></td>
           </tr>
         </table>
       </div>

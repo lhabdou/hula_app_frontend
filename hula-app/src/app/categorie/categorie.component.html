@@ -5,15 +5,18 @@
       <div class="panel-heading">Liste des produits</div>
       <div class="panel-body">
         <table class="table table-striped">
+
+          <tr><h1>{{categorie.nomCategorie}} </h1></tr>
+
           <tr>
             <th>Code EAN</th>
             <th>Nom</th>
             <th>Descriptions</th>
           </tr>
-          <tr *ngFor="let p of produits" [routerLink]="['/categorie', p.id]">
+          <tr *ngFor="let p of categorie.produits" routerLink="/produit/{{p.id}}">
             <td>{{p.codeEan}}</td>
-            <td>{{p.nom}}</td>
-            <td>{{p.descriptif}}</td>
+            <td>{{p.nomProduit}}</td>
+            <td>{{p.descriptifProduit}}</td>
           </tr>
         </table>
       </div>

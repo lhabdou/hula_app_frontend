@@ -23,8 +23,6 @@ private categories:any;
 
     ngOnInit() {
       this.categories = this.categoriesService.getCategories();
-      );
-
     }
 
 }

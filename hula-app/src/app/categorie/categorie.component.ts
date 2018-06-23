@@ -1,24 +1,39 @@
 import { Http } from '@angular/http';
 import { CategoriesService } from './../services/categories.service';
 import { Component, OnInit } from '@angular/core';
-import { RouterModule, ParamMap, ActivatedRoute, Router } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap, Route } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-categorie',
   templateUrl: './categorie.component.html',
   styleUrls: ['./categorie.component.css']
 })
+
 export class CategorieComponent implements OnInit {
 
   private produits:any;
-  private categorie: any; 
-  private categorieUrl = "hula-app/categorie"; 
-  
+  private categorie:any; 
 
+  constructor(
+    private categoriesService: CategoriesService,
+    private route: ActivatedRoute,
+  private router: Router ) { }
+    
     ngOnInit() {
+      const selectedId = +this.route.snapshot.paramMap.get('id');
+      console.log("Hello" + selectedId);
 
-     //this.categorie = this.categoriesService.goToCategorie('1');
-      //this.produits = this.categorie.produits;
+      this.getCategorie(selectedId);
+    }
+
+    getCategorie(id:Number) {
+    this.categorie = this.categoriesService.goToCategorie(id).then(
+      categorie=>{
+        this.categorie = categorie; 
+      }
+    );
+    
     }
 
 }

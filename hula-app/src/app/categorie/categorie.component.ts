@@ -1,8 +1,7 @@
 import { Http } from '@angular/http';
 import { CategoriesService } from './../services/categories.service';
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap, Route } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-categorie',
@@ -12,7 +11,6 @@ import { switchMap } from 'rxjs/operators';
 
 export class CategorieComponent implements OnInit {
 
-  private produits:any;
   private categorie:any; 
 
   constructor(

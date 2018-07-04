@@ -2,9 +2,7 @@ import { Constantes } from './../constantes/constantes.utils';
 import { CategoriesService } from './../services/categories.service';
 import { Component, OnInit } from '@angular/core';
 
-import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
-import{HttpModule,Http,Response} from '@angular/http';
+import{Http} from '@angular/http';
 
 
 @Component({

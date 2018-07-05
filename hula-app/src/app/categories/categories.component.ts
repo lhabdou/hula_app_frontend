@@ -15,12 +15,16 @@ export class CategoriesComponent implements OnInit {
 private categories:any;
 
   constructor(
-    private categoriesService: CategoriesService,
-    private constantes:Constantes,
-  private http: Http) { }
+    private categoriesService: CategoriesService) { }
+
+    loadCategories():any {
+
+      return this.categoriesService.getCategories();
+    }
 
     ngOnInit() {
-      this.categories = this.categoriesService.getCategories();
+
+      this.categories = this.loadCategories();
     }
 
 }

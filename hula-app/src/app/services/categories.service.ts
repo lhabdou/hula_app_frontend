@@ -15,14 +15,14 @@ private categorieUrl = "hula-app/categorie/";
 backendURL = this.constantes.LOCAL_BACKEND_URL; 
 
 
-  getCategories() {
+  getCategories(): Promise<Object> {
 
    return this.httpClient.get(this.backendURL + this.categoriesUrl)
     .toPromise();
     
   }
 
-  goToCategorie(id:Number) {
+  goToCategorie(id:Number): Promise<Object>  {
     return this.httpClient.get(this.backendURL + this.categorieUrl + id)
     .toPromise();
   }

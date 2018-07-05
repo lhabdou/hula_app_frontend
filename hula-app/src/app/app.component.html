@@ -8,7 +8,7 @@
 </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-inverse">
+    <nav class="navbar navbar-expand-sm navbar-light" style="background-color: rgb(85, 163, 44);">
       <a class="navbar-brand" href="#">ChaHula</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="categories">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="categories">
               Categories
             </a>
             <div class="dropdown-menu" aria-labelledby="categories">
@@ -38,14 +38,13 @@
 
             </div>
           </li>
-
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
+          </li> -->
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Rechercher">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ndrini</button>
+          <input class="form-control mr-sm-2" type="search" placeholder="Rechercher un produit" aria-label="Rechercher">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ok</button>
         </form>
       </div>
     </nav>
@@ -53,13 +52,6 @@
     <router-outlet></router-outlet>
 
 </body>
-
-<footer class>
-
-  <li class="nav-item">
-    <a class="nav-link" routerLink="/contacts">Contacts</a>
-  </li>
-</footer>
 
 
 

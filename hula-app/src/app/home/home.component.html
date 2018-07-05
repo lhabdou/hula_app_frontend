@@ -1,26 +1,13 @@
-<div>
-    <p>
-        home works!
-      </p>     
-      <ul>
-        <li>
-          <h2>Name: {{info.name}}</h2>
-        </li>
-        <li>
-          <h2>Email: {{info.email}}</h2>
-        </li>
-        <li>
-            <h2>Tel: {{info.tel}}</h2>
-          </li>
-      </ul>
-  
-</div>
+<body>
 
-<div>
-    <ul>
-      <li *ngFor="let c of comments">
-      {{c.message}},
-      <span>{{c.date|date:'dd/MM/yyyy HH:mm:ss'}}</span>
-    </li>
-    </ul>
-</div>
+  <p>
+    Ce site permet de visulaliser différentes informations sur les produits alimentaires, que nous consommons tous les jours
+    <br> Plusieurs catégories de produits sont repertoriés.
+
+  </p>
+
+</body>
+
+<footer>
+    <a class="contact-link btn btn-info" routerLink="/contacts">Contacts</a>
+</footer>

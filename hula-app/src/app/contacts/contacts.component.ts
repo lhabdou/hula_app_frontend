@@ -8,17 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ContactsComponent implements OnInit {
   contact={
     nom:"Abdoul",
-    email:"test.abdoul@hotmail.fr"
-  }
-
-  months = ["", "January", "Feburary", "March", "April",
-  "May", "June", "July", "August", "September",
-  "October", "November", "December"];
-  isavailable = true;
-
-  myClickFunction(event) {
-    alert("Button is clicked");     
-    console.log(event);
+    email:"lhabdou26@hotmail.fr"
   }
 
   constructor() { }

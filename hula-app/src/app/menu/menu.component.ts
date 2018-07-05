@@ -8,14 +8,18 @@ import { CategoriesService } from '../services/categories.service';
 })
 export class MenuComponent implements OnInit {
 
-private categoriesService: CategoriesService;
+  constructor(
+    private categoriesService: CategoriesService) { }
 
-
-  private categ: any; 
+  private categ: any;
 
   ngOnInit() {
-  
- 
+
+    this.categoriesService.getCategories().then(
+      categories => {
+        this.categ = categories
+      }
+    )
   }
 
 }

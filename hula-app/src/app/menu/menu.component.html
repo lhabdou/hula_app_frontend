@@ -17,7 +17,7 @@
         </a>
         <div>
           <div class="dropdown-menu" aria-labelledby="categories">
-            <a *ngFor="let c of categ" class="dropdown-item" routerLink="/categorie/{{c.id}}">{{c?.nomCategorie}}</a>
+            <a *ngFor="let c of categ" class="dropdown-item" routerLink="/categorie/{{c.idCategorie}}">{{c.nomCategorie}}</a>
             <a class="dropdown-item" routerLink="/categories">Afficher toutes</a>
           </div>
         </div>

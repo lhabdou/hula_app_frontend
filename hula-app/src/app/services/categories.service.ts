@@ -1,6 +1,7 @@
 import { Constantes } from './../constantes/constantes.utils';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,6 +13,7 @@ export class CategoriesService {
 
 private categoriesUrl = "hula-app/categories"; 
 private categorieUrl = "hula-app/categorie/"; 
+
 backendURL = this.constantes.LOCAL_BACKEND_URL; 
 
 

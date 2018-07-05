@@ -1,1 +1,18 @@
+/* .dropdown:hover>.dropdown-menu {
+    display: block;
+  }  */
+  .contact-link {
+    position: fixed;
+    bottom: 2%;
+    left: 1%;
+    margin-top: 0%;
+  }
+  .logo_footer {
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    margin-bottom: 0%;
+    height: 50px;
+    opacity: 0.5;  
+  }
 

@@ -2,9 +2,7 @@ import { Constantes } from './../constantes/constantes.utils';
 import { CategoriesService } from './../services/categories.service';
 import { Component, OnInit } from '@angular/core';
 
-import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
-import{HttpModule,Http,Response} from '@angular/http';
+import{Http} from '@angular/http';
 
 
 @Component({
@@ -17,12 +15,16 @@ export class CategoriesComponent implements OnInit {
 private categories:any;
 
   constructor(
-    private categoriesService: CategoriesService,
-    private constantes:Constantes,
-  private http: Http) { }
+    private categoriesService: CategoriesService) { }
+
+    loadCategories():any {
+
+      return this.categoriesService.getCategories();
+    }
 
     ngOnInit() {
-      this.categories = this.categoriesService.getCategories();
+
+      this.categories = this.loadCategories();
     }
 
 }

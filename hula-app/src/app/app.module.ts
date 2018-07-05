@@ -10,6 +10,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { Constantes } from './constantes/constantes.utils';
 import { CategorieComponent } from './categorie/categorie.component';
+import { MenuComponent } from './menu/menu.component';
  
 const appRoutes: Routes = [
 
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
     HomeComponent,
     ContactsComponent,
     CategoriesComponent,
-    CategorieComponent
+    CategorieComponent,
+    MenuComponent
   ],
 
   imports: [

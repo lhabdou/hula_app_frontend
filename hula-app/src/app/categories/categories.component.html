@@ -4,16 +4,16 @@
       <div class="panel-body">
         <table class="table table-striped">
           <tr>
-            <th>ID</th>
+            <th hidden="true">ID</th>
             <th>Nom</th>
             <th>Descriptions</th>
-            <th>Produits</th>
           </tr>
-          <tr *ngFor="let c of categories | async">
-            <td>{{c.idCategorie}}</td>
-            <td>{{c.nomCategorie}}</td>
+          <tr *ngFor="let c of categories | async" routerLink="/categorie/{{c.idCategorie}}"
+            data-toggle="tooltip" data-placement="bottom" 
+            title="Cliquer pour visualiser la categorie {{c.nomCategorie}}">
+            <td hidden="true">{{c.idCategorie}}</td>
+            <td class="click">{{c.nomCategorie}}</td>
             <td>{{c.descriptif}}</td>
-            <td><a routerLink="/categorie/{{c.idCategorie}}">ici</a></td>
           </tr>
         </table>
       </div>

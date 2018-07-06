@@ -2,7 +2,7 @@ import { Constantes } from './../constantes/constantes.utils';
 import { CategoriesService } from './../services/categories.service';
 import { Component, OnInit } from '@angular/core';
 
-import{Http} from '@angular/http';
+import { Http } from '@angular/http';
 
 
 @Component({
@@ -11,21 +11,16 @@ import{Http} from '@angular/http';
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
- 
-private categories:any;
+
+  private categories: any;
 
   constructor(
     private categoriesService: CategoriesService) { }
 
-    loadCategories():any {
+  ngOnInit() {
 
-      return this.categoriesService.getCategories();
-    }
-
-    ngOnInit() {
-
-      this.categories = this.loadCategories();
-    }
+    this.categoriesService.currentCategories.subscribe(cat => this.categories = cat);
+  }
 
 }
 

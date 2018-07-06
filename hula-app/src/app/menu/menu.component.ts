@@ -15,11 +15,7 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
 
-    this.categoriesService.getCategories().then(
-      categories => {
-        this.categ = categories
-      }
-    )
+    this.categoriesService.currentCategories.subscribe(cat => this.categ = cat);
   }
 
 }

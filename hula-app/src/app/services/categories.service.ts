@@ -16,6 +16,10 @@ private categorieUrl = "hula-app/categorie/";
 
 backendURL = this.constantes.LOCAL_BACKEND_URL; 
 
+private categorieData = new BehaviorSubject<any>(this.getCategories());
+
+currentCategories = this.categorieData.asObservable(); 
+
 
   getCategories(): Promise<Object> {
 

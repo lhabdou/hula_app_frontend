@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-sm navbar-light" style="background-color: rgb(85, 163, 44);">
-  <a class="navbar-brand" href="#">ChaHula</a>
+  <a class="navbar-brand">ChaHula</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -17,7 +17,7 @@
         </a>
         <div>
           <div class="dropdown-menu" aria-labelledby="categories">
-            <a *ngFor="let c of categ" class="dropdown-item" routerLink="/categorie/{{c.idCategorie}}">{{c.nomCategorie}}</a>
+            <a *ngFor="let c of categ | async" class="dropdown-item" routerLink="/categorie/{{c.idCategorie}}">{{c.nomCategorie}}</a>
             <a class="dropdown-item" routerLink="/categories">Afficher toutes</a>
           </div>
         </div>
@@ -26,7 +26,7 @@
       </li>
       <!-- <li class="nav-item">
           <a class="nav-link disabled" href="#">Disabled</a>
-        </li> -->
+      </li> -->
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Rechercher un produit" aria-label="Rechercher">

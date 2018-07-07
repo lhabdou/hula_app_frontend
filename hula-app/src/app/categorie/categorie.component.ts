@@ -15,13 +15,10 @@ export class CategorieComponent implements OnInit {
 
   constructor(
     private categoriesService: CategoriesService,
-    private route: ActivatedRoute,
-  private router: Router ) { }
-    
+    private route: ActivatedRoute) { }
+
     ngOnInit() {
       const selectedId = +this.route.snapshot.paramMap.get('id');
-      console.log("Hello" + selectedId);
-
       this.getCategorie(selectedId);
     }
 

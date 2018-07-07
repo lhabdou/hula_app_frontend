@@ -1,21 +1,20 @@
 <div class="container spacer">
-    <div class = "panel panel-primary">
-      <div class="panel-heading">Liste des categories</div>
-      <div class="panel-body">
-        <table class="table table-striped">
-          <tr>
-            <th hidden="true">ID</th>
-            <th>Nom</th>
-            <th>Descriptions</th>
-          </tr>
-          <tr *ngFor="let c of categories | async" routerLink="/categorie/{{c.idCategorie}}"
-            data-toggle="tooltip" data-placement="bottom" 
-            title="Cliquer pour visualiser la categorie {{c.nomCategorie}}">
-            <td hidden="true">{{c.idCategorie}}</td>
-            <td class="click">{{c.nomCategorie}}</td>
-            <td>{{c.descriptif}}</td>
-          </tr>
-        </table>
-      </div>
+  <div class="panel panel-primary">
+    <div class="panel-heading">Liste des categories</div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <tr>
+          <th hidden="true">ID</th>
+          <th>Nom</th>
+          <th>Descriptions</th>
+        </tr>
+        <tr *ngFor="let c of categories | async" routerLink="/categorie/{{c.idCategorie}}" data-toggle="tooltip" data-placement="bottom"
+          title="Cliquer pour visualiser la categorie {{c.nomCategorie}}">
+          <td hidden="true">{{c.idCategorie}}</td>
+          <td class="click">{{c.nomCategorie}}</td>
+          <td>{{c.descriptif}}</td>
+        </tr>
+      </table>
     </div>
+  </div>
 </div>
